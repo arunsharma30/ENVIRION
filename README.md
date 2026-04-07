@@ -354,21 +354,21 @@ Step 4: IMPACT PROJECTION
 
 ### Positive Interventions (Pollution Reducers)
 
-| Icon | Name | Impact Type | Max CO₂ Reduction |
-|---|---|---|---|
-| | Timber Construction | Replaces carbon-heavy concrete | 35% |
-| | Green Cement | Low-clinker cement mix | 30% |
-| | Retrofit Policy | Renovate instead of demolish | 90% |
-| | Public Transit | Shift to light-rail/metro | 50% |
-| | EV Adoption | Electrify vehicle fleet | 65% |
-| | Urban Greening | Expand tree canopy | 15% |
-| | Industrial CCS | Carbon capture on stacks | 75% |
+| Name | Impact Type | Max CO₂ Reduction |
+|---|---|---|
+| Timber Construction | Replaces carbon-heavy concrete | 35% |
+| Green Cement | Low-clinker cement mix | 30% |
+| Retrofit Policy | Renovate instead of demolish | 90% |
+| Public Transit | Shift to light-rail/metro | 50% |
+| EV Adoption | Electrify vehicle fleet | 65% |
+| Urban Greening | Expand tree canopy | 15% |
+| Industrial CCS | Carbon capture on stacks | 75% |
 
 ### Negative Interventions (Pollution Stressors)
 
-| Icon | Name | Impact | CO₂ per ton |
-|---|---|---|---|
-| | Parali Burning | Stubble/crop burning | 1460 kg CO₂/tonne |
+| Name | Impact | CO₂ per ton |
+|---|---|---|
+| Parali Burning | Stubble/crop burning | 1460 kg CO₂/tonne |
 
 ---
 
