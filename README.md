@@ -2,7 +2,7 @@
 
 <img src="https://img.shields.io/badge/ENvirion-Environmental%20Digital%20Twin-16A34A?style=for-the-badge&logo=leaf&logoColor=white" />
 
-# 🌿 ENVIRION
+# ENVIRION
 ### AI-Powered Environmental Digital Twin Platform
 
 *Real-time air quality simulation · Urban intervention modeling · Government-grade analytics*
@@ -18,7 +18,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#-overview)
 - [Screenshots](#-screenshots)
@@ -35,79 +35,79 @@
 
 ---
 
-## 🌍 Overview
+## Overview
 
 **ENVIRION** is a full-stack environmental intelligence platform that transforms real-time air pollution data into interactive 3D urban simulations. It enables municipalities, researchers, and urban planners to model the impact of environmental interventions — before implementing them in the real world.
 
 > *"So, we know that in major cities like Delhi, the Air Quality Index is often in an alarming condition. Existing systems only show numbers — not solutions. ENVIRION changes that."*
 
 **Key Capabilities:**
-- 🗺️ Live 3D satellite map with real-time AQI heatmap overlay
-- 🎛️ Drag-and-drop environmental intervention simulation
-- 📊 US-EPA standard AQI calculation engine
-- 🔐 Municipality login system with Supabase authentication
-- 💾 Save and load simulation scenarios per organization
-- 📡 Dual-API resilience with automatic failover
+- Live 3D satellite map with real-time AQI heatmap overlay
+- Drag-and-drop environmental intervention simulation
+- US-EPA standard AQI calculation engine
+- Municipality login system with Supabase authentication
+- Save and load simulation scenarios per organization
+- Dual-API resilience with automatic failover
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-### 🏠 Landing Page — Hero Section
+### Landing Page — Hero Section
 > AI-Powered Environmental Digital Twin with live AQI card preview
 
 ![Hero Section](./Screenshot_2026-04-08_002443.png)
 
 ---
 
-### 🌿 About Section — Live AQI Snapshot
+### About Section — Live AQI Snapshot
 > Pollution bar chart, active interventions preview, and platform description
 
 ![About Section](./Screenshot_2026-04-08_002830.png)
 
 ---
 
-### 🗺️ Analyst Mode — Full Simulation Dashboard
+### Analyst Mode — Full Simulation Dashboard
 > 3D satellite map with heatmap, left metrics panel, intervention sliders, and drag-to-map deployment
 
 ![Analyst Dashboard](./Screenshot__116_.png)
 
 ---
 
-### 🔐 Login Page — Municipality Sign In
+### Login Page — Municipality Sign In
 > Secure government municipality login to access the environmental intelligence dashboard
 
 ![Login Page](./Screenshot_2026-04-08_002750.png)
 
 ---
 
-### 📝 Register Page — Municipality Registration
+### Register Page — Municipality Registration
 > Register your municipal organization to access the simulation platform
 
 ![Register Page](./Screenshot_2026-04-08_002631.png)
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 🔴 **Live AQI Data** | Real-time PM2.5, PM10, CO, NO₂ from Open-Meteo API |
-| 🗺️ **3D City Map** | MapLibre GL satellite basemap with 3D building extrusions |
-| 🎯 **Drag & Drop** | Place intervention markers anywhere on the live map |
-| 🔥 **Pollution Heatmap** | Dynamic heatmap responds to interventions in real time |
-| 📊 **EPA AQI Engine** | Full US-EPA breakpoint calculations for all pollutants |
-| ♻️ **CO₂ Modeling** | Net carbon impact using IPCC CO₂e equivalency factors |
-| 🔄 **Dual-API Failover** | Auto-switches to OpenWeatherMap if primary API fails |
-| 📋 **Audit Log** | Hash-verified, timestamped log of every API event |
-| 🔐 **Auth System** | Municipality login & registration via Supabase |
-| 💾 **Save/Load** | Save simulation scenarios and reload across sessions |
-| 🌐 **Global Search** | Search any city on earth via Nominatim/OSM |
-| ⚠️ **Negative Stressors** | Model Parali burning & pollution increase scenarios |
+| **Live AQI Data** | Real-time PM2.5, PM10, CO, NO₂ from Open-Meteo API |
+| **3D City Map** | MapLibre GL satellite basemap with 3D building extrusions |
+| **Drag & Drop** | Place intervention markers anywhere on the live map |
+| **Pollution Heatmap** | Dynamic heatmap responds to interventions in real time |
+| **EPA AQI Engine** | Full US-EPA breakpoint calculations for all pollutants |
+| **CO₂ Modeling** | Net carbon impact using IPCC CO₂e equivalency factors |
+| **Dual-API Failover** | Auto-switches to OpenWeatherMap if primary API fails |
+| **Audit Log** | Hash-verified, timestamped log of every API event |
+| **Auth System** | Municipality login & registration via Supabase |
+| **Save/Load** | Save simulation scenarios and reload across sessions |
+| **Global Search** | Search any city on earth via Nominatim/OSM |
+| **Negative Stressors** | Model Parali burning & pollution increase scenarios |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 | Technology | Purpose |
@@ -143,7 +143,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ENVIRION/
@@ -222,7 +222,7 @@ ENVIRION/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -233,7 +233,7 @@ Make sure you have the following installed:
 
 ---
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 
 ```bash
 git clone https://github.com/arunsharma30/Envirion.git
@@ -242,7 +242,7 @@ cd Envirion
 
 ---
 
-### 2️⃣ Setup the Frontend
+### 2️ Setup the Frontend
 
 ```bash
 cd react-app
@@ -267,7 +267,7 @@ Frontend runs at → `http://localhost:5173`
 
 ---
 
-### 3️⃣ Setup the Backend
+### 3️ Setup the Backend
 
 ```bash
 cd ../server
@@ -293,7 +293,7 @@ Backend API runs at → `http://localhost:5000`
 
 ---
 
-### 4️⃣ Open the App
+### 4️ Open the App
 
 Go to `http://localhost:5173` in your browser.
 
@@ -303,7 +303,7 @@ Go to `http://localhost:5173` in your browser.
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 ### Frontend (`react-app/.env`)
 
@@ -324,7 +324,7 @@ Go to `http://localhost:5173` in your browser.
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ```
 Step 1: LIVE DATA INGESTION
@@ -350,29 +350,29 @@ Step 4: IMPACT PROJECTION
 
 ---
 
-## 🎛️ Interventions
+## Interventions
 
-### ✅ Positive Interventions (Pollution Reducers)
+### Positive Interventions (Pollution Reducers)
 
 | Icon | Name | Impact Type | Max CO₂ Reduction |
 |---|---|---|---|
-| 🏗️ | Timber Construction | Replaces carbon-heavy concrete | 35% |
-| 🏭 | Green Cement | Low-clinker cement mix | 30% |
-| 🔧 | Retrofit Policy | Renovate instead of demolish | 90% |
-| 🚇 | Public Transit | Shift to light-rail/metro | 50% |
-| ⚡ | EV Adoption | Electrify vehicle fleet | 65% |
-| 🌳 | Urban Greening | Expand tree canopy | 15% |
-| 🏭 | Industrial CCS | Carbon capture on stacks | 75% |
+| | Timber Construction | Replaces carbon-heavy concrete | 35% |
+| | Green Cement | Low-clinker cement mix | 30% |
+| | Retrofit Policy | Renovate instead of demolish | 90% |
+| | Public Transit | Shift to light-rail/metro | 50% |
+| | EV Adoption | Electrify vehicle fleet | 65% |
+| | Urban Greening | Expand tree canopy | 15% |
+| | Industrial CCS | Carbon capture on stacks | 75% |
 
-### ⛔ Negative Interventions (Pollution Stressors)
+### Negative Interventions (Pollution Stressors)
 
 | Icon | Name | Impact | CO₂ per ton |
 |---|---|---|---|
-| 🔥 | Parali Burning | Stubble/crop burning | 1460 kg CO₂/tonne |
+| | Parali Burning | Stubble/crop burning | 1460 kg CO₂/tonne |
 
 ---
 
-## 📐 AQI Engine
+## AQI Engine
 
 ENVIRION uses the **US-EPA standard breakpoint formula** to compute AQI:
 
@@ -408,11 +408,11 @@ AQI = ((I_high - I_low) / (C_high - C_low)) × (C - C_low) + I_low
 
 | Method | Endpoint | Auth | Description |
 |---|---|---|---|
-| `POST` | `/api/auth/register` | ❌ | Register a new municipality |
-| `POST` | `/api/auth/login` | ❌ | Login and get JWT token |
-| `GET` | `/api/simulations` | ✅ JWT | Get saved simulations for user |
-| `POST` | `/api/simulations` | ✅ JWT | Save a new simulation scenario |
-| `DELETE` | `/api/simulations/:id` | ✅ JWT | Delete a saved simulation |
+| `POST` | `/api/auth/register` | | Register a new municipality |
+| `POST` | `/api/auth/login` | | Login and get JWT token |
+| `GET` | `/api/simulations` | JWT | Get saved simulations for user |
+| `POST` | `/api/simulations` | JWT | Save a new simulation scenario |
+| `DELETE` | `/api/simulations/:id` | JWT | Delete a saved simulation |
 
 ### External APIs Used
 
@@ -425,17 +425,17 @@ AQI = ((I_high - I_low) / (C_high - C_low)) × (C - C_low) + I_low
 
 ---
 
-## 👤 Author
+## Author
 
 **Arun Sharma**
-📧 arun.sharma24@pccoepune.org
+arun.sharma24@pccoepune.org
 🔗 [GitHub — arunsharma30](https://github.com/arunsharma30)
 
 > *ENVIRION was built as part of an academic Community Engagement Program project at PCCOE Pune, focusing on environmental digital twin technology for smart city applications.*
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source and available for academic and non-commercial use.
 
@@ -443,7 +443,7 @@ This project is open-source and available for academic and non-commercial use.
 
 <div align="center">
 
-**🌿 Built for a cleaner, data-driven future.**
+** Built for a cleaner, data-driven future.**
 
 *ENvirion · Environmental Digital Twin · PCCOE Pune · 2025*
 
