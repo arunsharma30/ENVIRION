@@ -1,47 +1,66 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { getMe } from '../services/backend';
+import supabase from '../lib/supabaseClient';
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(() => localStorage.getItem('envirion_token'));
+  const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Hydrate user from stored token on mount
+  // Hydrate user from Supabase session on mount
   useEffect(() => {
-    if (token) {
-      getMe(token)
-        .then(data => {
-          setUser(data.user);
-          setLoading(false);
-        })
-        .catch(() => {
-          // Token invalid/expired — clear
-          localStorage.removeItem('envirion_token');
+    // Get initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        const meta = session.user.user_metadata || {};
+        setToken(session.access_token);
+        setUser({
+          id: session.user.id,
+          name: meta.name || '',
+          email: session.user.email,
+          region: meta.region || ''
+        });
+      }
+      setLoading(false);
+    });
+
+    // Listen for auth state changes (token refresh, sign-out, etc.)
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        if (session) {
+          const meta = session.user.user_metadata || {};
+          setToken(session.access_token);
+          setUser({
+            id: session.user.id,
+            name: meta.name || '',
+            email: session.user.email,
+            region: meta.region || ''
+          });
+        } else {
           setToken(null);
           setUser(null);
-          setLoading(false);
-        });
-    } else {
-      setLoading(false);
-    }
+        }
+      }
+    );
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
 
   const login = (newToken, userData) => {
-    localStorage.setItem('envirion_token', newToken);
     setToken(newToken);
     setUser(userData);
   };
 
   const signup = (newToken, userData) => {
-    localStorage.setItem('envirion_token', newToken);
     setToken(newToken);
     setUser(userData);
   };
 
-  const logout = () => {
-    localStorage.removeItem('envirion_token');
+  const logout = async () => {
+    await supabase.auth.signOut();
     setToken(null);
     setUser(null);
   };
