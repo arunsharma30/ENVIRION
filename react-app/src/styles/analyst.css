@@ -1,0 +1,194 @@
+/* ============================================================
+   ENVIRION – Analyst Mode Styles (analyst.css)
+   ============================================================ */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #e8f0ed;
+  overflow: hidden;
+  color: var(--text);
+}
+
+#map { position: absolute; top: 0; bottom: 0; width: 100%; height: 100vh; z-index: 1; }
+
+/* ===== TOP NAV BAR ===== */
+.analyst-nav {
+  position: absolute; top: 0; left: 0; right: 0; height: 52px; z-index: 2000;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.anav-brand {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 800; font-size: 16px; color: var(--heading); text-decoration: none;
+}
+.anav-logo {
+  width: 28px; height: 28px; border-radius: 7px;
+  background: linear-gradient(135deg, var(--green), var(--blue));
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+.anav-mode {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--green);
+  background: rgba(22,163,74,0.1); padding: 3px 9px;
+  border-radius: 50px; margin-left: 8px;
+}
+.anav-back {
+  display: flex; align-items: center; gap: 6px;
+  padding: 7px 16px; border-radius: 8px;
+  border: 1.5px solid var(--border); color: var(--text);
+  font-size: 12px; font-weight: 600; cursor: pointer;
+  background: var(--bg-card); text-decoration: none; transition: all .2s;
+}
+.anav-back:hover { border-color: var(--green); color: var(--green); }
+.anav-status { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+.anav-dot { width: 7px; height: 7px; border-radius: 50%; background: #10b981; animation: ndot 2s infinite; }
+@keyframes ndot { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+
+/* ===== PANELS ===== */
+.panel {
+  position: absolute; top: 62px; bottom: 20px; width: 330px;
+  background: var(--panel-bg, rgba(255,255,255,0.97));
+  border: 1px solid var(--border2);
+  display: flex; flex-direction: column; z-index: 1000;
+  box-shadow: var(--shadow); border-radius: 14px;
+}
+.panel-left  { left: 20px;  border-top: 3px solid var(--green); }
+.panel-right { right: 20px; border-top: 3px solid var(--blue); }
+
+.header {
+  padding: 16px 18px;
+  background: rgba(240,253,244,0.9);
+  border-bottom: 1px solid var(--border);
+  border-radius: 11px 11px 0 0;
+}
+h2 { margin: 0; font-size: 17px; color: var(--heading); font-weight: 800; letter-spacing: .3px; }
+.sub { font-size: 10px; color: var(--muted); text-transform: uppercase; margin-top: 3px; font-weight: 700; letter-spacing: 1px; }
+.content { padding: 16px; overflow-y: auto; flex-grow: 1; }
+
+/* ===== FORM ELEMENTS ===== */
+select {
+  width: 100%; padding: 10px 12px; margin-bottom: 16px;
+  border: 1px solid var(--border2); border-radius: 8px;
+  font-size: 13px; outline: none;
+  background: var(--bg-card); color: var(--heading); font-weight: 500;
+}
+select:focus { border-color: var(--green); }
+
+.location-input {
+  flex: 1; padding: 8px 10px; border-radius: 7px;
+  border: 1px solid var(--border2); background: var(--bg-card);
+  color: var(--heading); font-size: 12px; outline: none;
+}
+.location-input::placeholder { color: var(--muted); }
+.location-input:focus { border-color: var(--green); }
+
+.location-btn {
+  padding: 8px 10px; border-radius: 7px;
+  border: 1px solid var(--green); background: rgba(22,163,74,0.10);
+  color: var(--green); font-size: 11px; font-weight: 700;
+  cursor: pointer; text-transform: uppercase; transition: all .2s;
+}
+.location-btn:hover { background: var(--green); color: #fff; }
+
+input[type=range] { width: 100%; -webkit-appearance: none; background: transparent; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 5px; background: var(--border); border-radius: 3px; }
+input[type=range]::-webkit-slider-thumb { height: 16px; width: 16px; border-radius: 50%; background: var(--green); -webkit-appearance: none; margin-top: -5.5px; box-shadow: 0 0 8px rgba(22,163,74,0.4); transition: transform .1s; }
+
+/* ===== METRIC CARDS ===== */
+.metric-card {
+  background: var(--bg-tint); padding: 16px; border-radius: 10px;
+  text-align: center; margin-bottom: 12px;
+  border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.metric-val { font-size: 30px; font-weight: 800; color: var(--heading); line-height: 1; }
+.metric-lbl { font-size: 10px; color: var(--muted); text-transform: uppercase; margin-top: 6px; font-weight: 600; }
+.val-sim  { color: var(--blue)  !important; }
+.val-co2  { color: var(--green) !important; }
+
+/* ===== INTERVENTION PANEL ===== */
+.int-section-title { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px; }
+.int-section { margin-bottom: 16px; }
+.int-group { margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border); position: relative; }
+.int-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+.int-title {
+  font-size: 13px; font-weight: 700; color: var(--heading);
+  cursor: grab; user-select: none; padding: 3px 7px;
+  border-radius: 4px; transition: all .2s;
+}
+.int-title:hover { background: rgba(22,163,74,0.08); }
+.int-title.dragging { cursor: grabbing; opacity: .5; }
+.drag-handle { display: inline-block; margin-right: 6px; color: var(--muted); font-size: 11px; }
+.int-perc { font-size: 13px; font-weight: 700; color: var(--green); background: rgba(22,163,74,0.10); padding: 2px 8px; border-radius: 4px; }
+.int-desc { font-size: 11px; color: var(--muted); margin-bottom: 10px; line-height: 1.4; }
+
+/* ===== DATA STATUS ===== */
+#data-status { margin-top: 16px; padding: 12px; background: var(--bg-tint); border-radius: 8px; border: 1px solid var(--border); }
+#aqi-description, .aqi-description {
+  margin-top: 8px; padding: 7px; background: rgba(22,163,74,0.05);
+  border-radius: 6px; font-size: 10px; color: var(--text);
+  text-align: center; line-height: 1.4; border-left: 3px solid var(--green);
+}
+
+/* ===== HEATMAP LEGEND ===== */
+.heatmap-legend {
+  position: absolute; bottom: 30px; left: 365px; z-index: 1000;
+  background: rgba(255,255,255,0.97); padding: 12px 14px;
+  border-radius: 8px; border: 1px solid var(--border);
+  box-shadow: var(--shadow); min-width: 240px;
+}
+.legend-gradient {
+  width: 100%; height: 16px;
+  background: linear-gradient(to right,rgba(56,189,248,.9),rgba(16,185,129,.9),rgba(250,204,21,.9),rgba(251,146,60,.95),rgba(239,68,68,.95));
+  border-radius: 3px; margin-bottom: 4px;
+}
+.legend-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); }
+.legend-title { font-size: 10px; font-weight: 700; color: var(--heading); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; }
+
+/* ===== AQI SCALE BOX ===== */
+.aqi-scale-box {
+  position: absolute; bottom: 30px; right: 365px; z-index: 1000;
+  background: rgba(255,255,255,0.97); padding: 12px 14px;
+  border-radius: 8px; border: 1px solid var(--border);
+  box-shadow: var(--shadow); max-width: 190px;
+}
+.aqi-scale-title { font-size: 10px; font-weight: 700; color: var(--heading); text-transform: uppercase; margin-bottom: 8px; }
+
+/* ===== INTERVENTION MARKERS ON MAP ===== */
+.intervention-marker {
+  position: absolute; width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: move; user-select: none; z-index: 500;
+  transition: all .3s ease; box-shadow: 0 4px 14px rgba(0,0,0,0.25); border: 3px solid;
+}
+.intervention-marker.active { animation: pulse 2s infinite; }
+@keyframes pulse {
+  0%,100% { box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+  50%      { box-shadow: 0 4px 22px rgba(22,163,74,.7), 0 0 28px rgba(22,163,74,.3); }
+}
+.marker-icon { font-size: 22px; }
+.marker-label {
+  position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
+  background: rgba(255,255,255,.95); padding: 3px 7px; border-radius: 4px;
+  font-size: 9px; font-weight: 700; white-space: nowrap;
+  border: 1px solid var(--border); color: var(--heading);
+  pointer-events: none; box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+.marker-delete {
+  position: absolute; top: -6px; right: -6px;
+  width: 16px; height: 16px; border-radius: 50%;
+  border: none; font-size: 10px; font-weight: 700; cursor: pointer;
+  background: #fff; color: #ef4444; box-shadow: 0 0 4px rgba(0,0,0,.2); padding: 0;
+}
+
+/* ===== IMPACT ZONE CIRCLES ===== */
+.impact-zone {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  border: 2px dashed; opacity: .25; transition: all .3s ease;
+}
+.impact-zone.active { opacity: .5; animation: expand 2s infinite; }
+@keyframes expand {
+  0%,100% { transform: scale(1); opacity: .3; }
+  50%      { transform: scale(1.1); opacity: .55; }
+}

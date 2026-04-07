@@ -1,0 +1,32 @@
+/* ============================================================
+   ENVIRION – Shared CSS Variables & Reset
+   Used by: index.html and analyst.html
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+:root {
+  --green:        #16A34A;
+  --green-light:  #22C55E;
+  --green-dark:   #15803D;
+  --blue:         #0EA5E9;
+  --blue-dark:    #0284C7;
+  --bg:           #F4F9F7;
+  --bg-card:      #FFFFFF;
+  --bg-tint:      #F0FDF4;
+  --heading:      #0F172A;
+  --text:         #334155;
+  --muted:        #64748B;
+  --border:       #E2E8F0;
+  --border2:      #CBD5E1;
+  --shadow:       0 8px 32px rgba(0,0,0,0.08);
+  --shadow-hover: 0 20px 40px rgba(0,0,0,0.10);
+  --radius:       14px;
+  --radius-lg:    20px;
+}
